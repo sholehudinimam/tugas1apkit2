@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Reservasi kereta Api Online</title>
+
+<style>
+			.header{
+				text-align : center;
+			}
+			.forminput1{
+				float:left;	
+			
+			}
+			.forminput2{
+				
+			}
+			.formout{
+				margin-left: 21%;
+				margin-right: 21%;
+			}
+			body{
+				margin-left: 20%;
+				margin-right: 20%;
+				width:60%;
+			}
+			
+</style>
+
+</head>
+
+<body>
+<SCRIPT LANGUAGE="JavaScript">       
+   <!-- 
+     function eksekusi(){
+		var ktpstr		= "";
+		    ktpstr 		= (document.reservasi.ktp.value);
+		var namastr 	= "";
+			namastr 	= (document.reservasi.nama.value);
+		var alamatstr	= "";
+			alamatstr	= (document.reservasi.alamat.value);
+		var tempatstr	= "";
+			tempatstr	= (document.reservasi.tempat.value);
+		var tanggalstr	= "";
+			tanggalstr 	= (document.reservasi.tanggal.value);
+		var bulanstr	= "";
+			bulanstr	= (document.reservasi.bulan.value);
+		var tahunstr	= "";
+			 tahunstr	= (document.reservasi.tahun.value);
+		var kelaminstr	= "";
+		if(reservasi.radiokelamin1_1.checked==true){
+			kelaminstr ="Pria";	
+		}
+		if(reservasi.radiokelamin1_2.checked==true){
+			kelaminstr ="Wanita";	
+		}
+		var telpstr		= "";
+			telpstr		= (document.reservasi.telp.value);
+		var daristr		= "";
+			daristr		= (document.reservasi.dari.value);
+		var tujuanstr	= "";
+			tujuanstr	= (document.reservasi.tujuan.value);
+		var dewasastr	= "";
+			dewasastr	= (document.reservasi.dewasa.value);
+		var anakstr		= "";
+			anakstr		= (document.reservasi.anak.value);
+		var inflantstr	= "";
+			inflantstr	= (document.reservasi.inflant.value);
+		var namakeretastr	= "";
+			namakeretastr	= (document.reservasi.namakereta.value);
+		if(!(ktpstr=="") && !(namastr=="") && !(alamatstr=="") && !(tempatstr=="kosong") && !(tanggalstr=="kosong") && !(bulanstr=="kosong") && !(tahunstr=="kosong") && !(kelaminstr=="") && !(telpstr=="") && !(daristr=="kosong") && !(tujuanstr=="kosong") && !(namakeretastr=="kosong")){
+		document.reservasi.oktp.value		=ktpstr;
+		document.reservasi.onama.value		=namastr;
+		document.reservasi.oalamat.value	=alamatstr;
+		document.reservasi.otempat.value	=tempatstr;
+		document.reservasi.otanggal.value	=tanggalstr;
+		document.reservasi.obulan.value		=bulanstr;
+		document.reservasi.otahun.value		=tahunstr;
+		document.reservasi.okelamin.value	=kelaminstr;
+		document.reservasi.otelp.value		=telpstr;
+		document.reservasi.odari.value		=daristr;
+		document.reservasi.otujuan.value	=tujuanstr;
+		document.reservasi.odewasa.value	=dewasastr;
+		document.reservasi.oanak.value		=anakstr;
+		document.reservasi.oinflant.value	=inflantstr;
+		document.reservasi.onamakereta.value	=namakeretastr;
+		}else{
+			alert("Isi Semua Form");	
+		}
+	 }        
+  
+              
+   //-->        
+</SCRIPT>
+<div class="header">
+	<center>
+    <img src="logo.jpg"  /><br />
+	<h3>RESERVASI TIKET KETERA API </h3><br />
+    </center>
+</div>
+<form name="reservasi">
+<div class="forminput1">
+<table width="300"  >
+  <tr>
+    <th scope="col" colspan="2" bgcolor="#00FF66">Data Diri Pemesanan Tiket</th>
+  </tr>
+  <tr>
+    <td>No.KTP</td>
+    <td><input type="text" name="ktp" id="ktp"  placeholder="Masukan No KTP"/> </td>
+  </tr>
+  <tr>
+    <td>Nama Lengkap</td>
+    <td><input type="text" name="nama" id="nama" placeholder="masukan Nama"/> </td>
+  </tr>
+  <tr>
+    <td>Alamat</td>
+    <td><textarea name="alamat" id="alamat" rows="2" placeholder="Masukan Alamat"></textarea></td>
+  </tr>
+  <tr>
+    <td>TTL</td>
+    <td> 
+    	<select name="tempat">
+        	<option value="kosong" >Tempat</option>
+        	<option value="Aceh" >Aceh</option>
+            <option value="Medan" >Medan</option>
+            <option value="Padang" >Padang</option>
+            <option value="Palembang" >Palembang</option>
+            <option value="Lampung" >Lampung</option>
+            <option value="Riau" >Riau</option>
+            <option value="Jakarta" >Jakarta</option>
+            <option value="Bandung" >Bandung</option>
+            <option value="Semarang" >Semarang</option>
+            <option value="Surabaya" >Surabaya</option>
+            <option value="Denpasar" >Denpasar</option>
+            <option value="Balikpapan" >Balikpapan</option>
+            <option value="Palangkaraya" >Palangkaraya</option>
+            <option value="Gorontalo" >Gorontalo</option>
+            <option value="Jayapura" >Jayapura</option>
+        </select> -
+        <select name="tanggal">
+        	<option value="kosong" >Tanggal</option>
+        	<script>
+				var i;
+				for (i=1;i<30;i++){
+   					document.writeln("<option value='"+i+"'>"+i+"</option>");
+					
+				}
+			</script>
+        </select>-
+        <select name="bulan">
+        	<option value="kosong" >Bulan</option>
+        	<option value="Januari" >Januari</option>
+            <option value="Februari"> Februari</option>
+            <option value="Maret">Maret </option>
+            <option value="April">April </option>
+            <option value="Mei"> Mei</option>
+            <option value="Juni"> Juni</option>
+            <option value="Juli"> Juli</option>
+            <option value="Agustus"> Agustus</option>
+            <option value="September"> September</option>
+            <option value="Oktober"> Oktober</option>
+            <option value="November"> November</option>
+            <option value="Desember"> Desember</option>
+        </select>-
+        <select name="tahun">
+        <option value="kosong" >Tahun</option>
+        	<script>
+				var i;
+				for (i=1950;i<2016;i++){
+   					document.writeln("<option value='"+i+"'>"+i+"</option>");
+					
+				}
+			</script>
+        </select>
+    </td>
+  </tr>
+  <tr>
+    <td>Jenis Kelamin</td>
+    <td>
+    	<input type="radio" name="kelamin" value="Pria" id="radiokelamin1_1"/>Pria<br />
+    	<input type="radio" name="kelamin" value="Wanita"  id="radiokelamin1_2"/>Wanita
+    </td>
+  </tr>
+  <tr>
+    <td>No. Telepon</td>
+    <td><input type="text" name="telp" id="telp" placeholder="Masukan No Telpon " /> </td>
+  </tr>
+</table>
+</div>
+<div class="forminput2">
+<table width="300" >
+  <tr>
+    <th scope="col" colspan="2" bgcolor="#0033CC" >Data Pemesanan</th>
+  </tr>
+  <tr>
+    <td>Stasiun Asal</td>
+    <td>
+    	<select name="dari">
+        	<option value="kosong" >-</option>
+        	<option value="Jakarta">Jakarta</option>
+            <option value="Bandung">Bandung</option>
+            <option value="Cirebon">Cirebon</option>
+            <option value="Tasikmalaya">Tasikmalaya</option>
+            <option value="Semarang">Semarang</option>
+            <option value="Yogyakarta">Yogyakarta</option>
+            <option value="Malang">Malang</option>
+            <option value="Surabaya">Surabaya</option>
+        </select>
+    </td>
+  </tr>
+  <tr>
+    <td>Stasiun Tujuan</td>
+    <td>
+    	<select name="tujuan">
+        	<option value="kosong" >-</option>
+        	<option value="Jakarta">Jakarta</option>
+            <option value="Bandung">Bandung</option>
+            <option value="Cirebon">Cirebon</option>
+            <option value="Tasikmalaya">Tasikmalaya</option>
+            <option value="Semarang">Semarang</option>
+            <option value="Yogyakarta">Yogyakarta</option>
+            <option value="Malang">Malang</option>
+            <option value="Surabaya">Surabaya</option>
+        </select>
+    </td>
+  </tr>
+  <tr>
+    <td>Jumlah Beli</td>
+    <td>
+    	Dewasa <select name="dewasa" id="dewasa" size="1">
+        	<option value="0" >-</option>
+        	<script>
+				var i;
+				for (i=1;i<20;i++){
+   					document.writeln("<option value='"+i+"'>"+i+"</option>");
+					
+				}
+			</script>	
+        </select>
+        Anak <select name="anak" id="anak" size="1">
+        <option value="0" >-</option>
+        	<script>
+				var i;
+				for (i=1;i<20;i++){
+   					document.writeln("<option value='"+i+"'>"+i+"</option>");
+					
+				}
+			</script>	
+        </select>
+        Inflant <select name="inflant" id="inflant" size="1">
+        <option value="0" >-</option>
+        	<script>
+				var i;
+				for (i=1;i<20;i++){
+   					document.writeln("<option value='"+i+"'>"+i+"</option>");
+					
+				}
+			</script>
+        </select>
+    </td>
+  </tr>
+  <tr>
+    <td>Nama Kereta</td>
+    <td>
+    	<select name="namakereta" id="namakereta" >
+        	<option value="kosong" >-</option>
+        	<option value="Argo Bromo">Argo Bromo</option>
+            <option value="Argo Dwipangga">Argo Dwipangga</option>
+            <option value="Argo Jati">Argo Jati</option>
+            <option value="Argo Lawu">Argo Lawu</option>
+            <option value="Argo Mulia">Argo Mulia</option>
+            <option value="Argo Parahiangan">Argo Parahiangan</option>	
+            <option value="Argo Wilis">Argo Wilis</option>
+    	</select>
+    </td>
+  </tr>
+  <tr>
+  		<td colspan="2">
+        	<input type="button" name="kirim" id="kirim" value="KIRIM"  onclick="eksekusi()"/>
+            <input type="reset" value="RESET" />
+        </td>
+  </tr>
+</table>
+</div>
+<div>
+<br />
+<br />
+<br />
+<hr />
+
+<h3 align="center">Informasi Data Diri Pemesanan dan Tiket Kereta Api</h3>
+<table class="formout">
+  <tr>
+    <td>No.KTP</td>
+    <td><input type="text" name="oktp" /> </td>
+  </tr>
+  <tr>
+    <td>Nama Lengkap</td>
+    <td> <input type="text" name="onama" /> </td>
+  </tr>
+  <tr>
+    <td>Alamat</td>
+    <td><textarea name="oalamat" size="2"> </textarea></td>
+  </tr>
+  <tr>
+    <td>Tempat Tanggal Tahir</td>
+    <td> <input type="text" name="otempat" size="12"/><br /><input type="text" name="otanggal" size="2"/>-<input type="text" name="obulan" />-<input type="text" name="otahun" size="4"/></td>
+  </tr>
+  <tr>
+    <td>Jenis Kelamin</td>
+    <td> <input type="text" name="okelamin" /> </td>
+  </tr>
+  <tr>
+    <td>No.Telepon</td>
+    <td> <input type="text" name="otelp"size="13"/>
+    <td></tr>
+  <tr>
+    <td>Perjalanan</td>
+    <td>dari Stasiun:<input type="text" name="odari"  size="13"/><br /> ke Stasiun:<input type="text" name="otujuan" size="13"/></td>
+  </tr>
+  <tr>
+    <td>Jumlah Beli</td>
+    <td>Dewasa :<input type="text" name="odewasa" size="2"/>; Anak:<input type="text" name="oanak" size="2" />; Inflant:<input type="text" name="oinflant"  size="2"/></td>
+  </tr>
+  <tr>
+    <td>Nama Kereta Api</td>
+    <td><input type="text" name="onamakereta"  size="16"/></td>
+  </tr>
+</table>
+</form>
+
+
+</div>
+
+</body>
+</html>
